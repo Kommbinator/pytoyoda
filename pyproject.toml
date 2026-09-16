@@ -22,7 +22,14 @@ repository = "https://github.com/pytoyoda/pytoyoda"
 "Release Notes" = "https://github.com/pytoyoda/pytoyoda/releases"
 
 [tool.poetry]
-version = "4.0.2"
+name = "pytoyoda"
+version = "5.2.2"
+description = "Python client for Toyota Connected Services Europe."
+authors = [
+    "CM000n <simon.hoerrle@gmail.com>",
+    "deejay1 <deejay1@srem.org>",
+]
+license = "MIT"
 packages = [
     { include = "pytoyoda" },
 ]
@@ -37,7 +44,6 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
 ]
-requires-poetry = '>=2.0,<3.0'
 
 [tool.poetry.dependencies]
 arrow = "^1.1"
@@ -60,12 +66,9 @@ pytest-sugar = "^1.0.0"
 [tool.poetry.group.docs.dependencies]
 pdoc = "^16.0.0"
 
-[tool.poetry-dynamic-versioning]
-enable = true
-
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
-build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 fix = true
